@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // No experimental flags that disable middleware
 };
 
 export default nextConfig;

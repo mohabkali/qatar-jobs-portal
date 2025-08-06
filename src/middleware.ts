@@ -1,11 +1,11 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
+import { clerkMiddleware } from '@clerk/nextjs/server';
 
 export default clerkMiddleware();
 
 export const config = {
   matcher: [
-    "/((?!.+\\.[\\w]+$|_next).*)", // protect all routes except static files
-    "/",                          // homepage
-    "/api/(.*)",                  // API routes
+    '/((?!.*\\..*|_next).*)', // Match all routes except static files and _next
+    '/',                      // Include root route
+    '/(api|trpc)(.*)'         // Include API and tRPC routes
   ],
 };
